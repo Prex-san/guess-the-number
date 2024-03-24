@@ -4,22 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the Number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&family=Workbench&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <h1 class="title">Guess the number!</h1>
-    <div class="num-container">
-      <p class="num">?</p>
+    <header></header>
+    <div class="s1">
+      <h1 class="title">Guess the number!</h1>
+      <div class="num-container">
+        <p class="num">?</p>
+      </div>
+      <input type="number" max="20" min="1" id="guess" />
+      <div class="prompt-message">Take a guess</div>
+      <div class="user-input">
+        <input type="button" value="Check!" id="checkPress" />
+        <input type="button" value="Play Again" id="repeatPress" />
+      </div>
+      <section class="score">
+        <div class="cur-score-container">
+          Score<span class="score cur-score">0</span>
+        </div>
+        <div class="high-score-container">
+          Highscore<span class="score high-score">0</span>
+        </div>
+      </section>
     </div>
-    <input type="number" max="20" min="0" id="guess" />
-    <div class="prompt-message">Take a guess</div>
-    <input type="button" value="Check!" id="checkPress" />
-    <input type="button" value="Play Again" id="repeatPress" />
-    <section class="score">
-      <div class="score cur-score">Score: 0</div>
-      <div class="score high-score">Highscore: 0</div>
-    </section>
-    <footer>Raghuraman, 2023. Version: 1.0</footer>
+    <audio autoplay loop>
+      <source src="./Ao no sumika.mp3" type="audio/mp3" />
+    </audio>
+    <footer>Raghuraman, 2023. Version: 2.0</footer>
   </body>
 </html>
